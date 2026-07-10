@@ -259,3 +259,48 @@ function mostraAlternativas() {
     caixaAlternativas.appendChild(botaoAlternativas);
   }
 }
+// código omitido
+
+function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativas();
+}
+
+// código omitido
+// código omitido
+
+function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+     caixaAlternativas.textContent = "";
+    mostraAlternativas();
+}
+
+// código omitido
+// código omitido
+
+function mostraResultado() {
+    textoPergunta.textContent = "Em 2049…";
+}
+
+// código omitido
+// código omitido
+
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historia += afirmacoes + "";
+    atual++;
+    mostraPergunta();
+}
+
+// código omitido
+127.0.0.1:5500
